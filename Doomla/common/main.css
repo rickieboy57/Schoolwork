@@ -1,0 +1,208 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Open Sans', sans-serif;
+	z-index: 0;
+
+}
+
+body{
+	background-color: #fff;
+}
+
+
+h1{
+	font-weight: 300;
+	font-size: 3em;
+	color: rgb(75, 75, 75);
+	text-align: center;
+}
+
+h2{
+	font-weight: 300;
+	font-style: 1em;
+	color: #666;
+	text-align: center;
+}
+
+body {
+	margin : 0 auto;
+	width : 700px;
+}
+
+table {
+	width : 700px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+table, td, th {
+	border : 1px #ddd solid;
+	border-collapse : collapse;
+	background-color: #eee;
+	color : black;
+}
+
+td, th {
+	padding : 2px;
+}
+
+th {
+	text-align : left;
+}
+
+td.center{
+	text-align : center;
+}
+
+a {
+	color : black;
+}
+p.options{
+	text-align : right;
+}
+
+label {
+	display : inline-block;
+	width : 100px;
+}
+form div {
+	width: 80%;
+	margin: 0 auto;
+	margin: 5px 0;
+}
+
+.text{
+	border-bottom: 1px solid #eee;
+	border-bottom-style: solid;
+}
+.text h1{
+	font-weight: 300;
+	font-size: 3em;
+	color: rgb(75, 75, 75);
+}
+
+.text h2{
+	font-weight: 300;
+	font-style: 1em;
+	color: #666;
+	border-top: 1px;
+	padding-bottom: 2%;
+}
+
+.content{
+	width: 100%; 
+	margin: 0 auto;
+	display: block;
+	text-align: center;
+	margin-top: 5%;
+}
+
+.content h1{
+	font-size: 1.5vw;
+	font-weight: 300;
+	color: rgb(75, 75, 75);
+
+}
+
+.content h2{
+	font-weight: 300;
+	font-size: 1vw;
+	color: #666;
+	border-top: 1px;
+	padding-bottom: 2%;
+}
+
+.footer {
+   	position:fixed;
+   	left: 0;
+   	right: 0;
+	border-top: 1px solid #d6d6d6;
+	border-top-style: solid;
+  	bottom:0px;
+   	height:30px;
+   	width: 100%;
+   	text-align: center;
+   	margin: 0 auto;
+   	background-color: #eee;
+   	padding-top: 1%;
+   	padding-bottom: 1%;
+   	z-index: -1;
+}
+
+.footer li{
+	display: inline-block;
+}
+
+.footer a{
+	text-decoration: none;
+	padding: 0px 10px 0px 10px;
+	font-style: 1vw;
+}
+
+/* IE 6 support */
+* html .footer {
+   	position:absolute;
+   	top:expression((0-(footer.offsetHeight)+(document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body.clientHeight)+(ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop))+'px');
+}
+
+@media all and (max-width: 1020px) {
+    .sidemenu { display: none; }
+}
+
+.sidemenu{
+	top: 0%;
+	width: 160px;
+	position: absolute;
+	left: 0%;
+	background-color: #191818;
+	height: 100%;
+    line-height: 1.6;
+	text-decoration: none;
+}
+
+.sidemenu h1{
+	color: white;
+	font-size: 125%;
+	text-align: left;
+	padding-left: 10%;
+	padding-top: 5%;
+	padding-bottom: 5%;
+	font-weight: 400;
+	letter-spacing: 2px;
+
+}
+
+.sidemenu hr{
+    height: 0px;
+    border-style: solid;
+    border-color: #333;
+    border-width: 2px 0 0 0;
+}
+
+.sidemenu ul{
+	list-style-type: none;
+}
+
+.sidemenu a:hover{
+	background-color: #333;
+
+}
+
+.sidemenu li #active{
+	background-color: #1F8DD6;
+	width: 90%;
+	text-align: left;
+	color: white;
+}
+
+.sidemenu a{
+	list-style-type: none;
+	text-decoration: none;
+	width: 90%;
+	color: #777;
+	float: left;
+	padding-left: 10%;
+	padding-top: 10px;
+	text-align: left;
+	vertical-align: middle;
+}
