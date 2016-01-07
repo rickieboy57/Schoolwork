@@ -5,7 +5,7 @@
 			// Setting the PageName variable
 	    $pageName = $_GET['page'];
 	}
-	else{
+	else {
 			// Setting the PageName variable to home
 	    $pageName = "home";
 			// Redirecting to page given
@@ -22,6 +22,7 @@
 	$sql = "SELECT * FROM `pagecontent` WHERE page = '$pageName'";
 	$result = $db->query($sql);
 	$rows = $result->fetch_assoc();
+	include "common/sidemenu.php";
 
 ?>
 <!DOCTYPE html>
@@ -33,9 +34,11 @@
 	<link rel="stylesheet" href="common/style.css">
 </head>
 <body>
-	<?=$rows['content']?>
+	<div class="text">
+		<?=$rows['content']?>
+	</div>
+	<div class="sidemenu">
+		<h1>Doomla</h1><hr>
+	</div>
 </body>
 </html>
-<?php
-	$pageloaded = true;
-?>
