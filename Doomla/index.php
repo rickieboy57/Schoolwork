@@ -19,12 +19,24 @@
 	    die("Connection failed: " . $db->connect_error);
 	}
 
-	$sql = "SELECT * FROM `pagecontent` WHERE page = '$pageName'";
-	$result = $db->query($sql);
-	$rows = $result->fetch_assoc();
-	include "common/sidemenu.php";
+	function getInfo($info){
+		// Defining the Globals variables to Local variables
+		GLOBAL $pageName;
+		GLOBAL $db;
+		$sql = "SELECT * FROM `pagecontent` WHERE '$pageName' = page";
+		$result = $db->query($sql);
+		$rows = $result->fetch_assoc();
+		return $rows;
+	}
+	
+	function getMenu(){
 
+	}
+
+	$rows = getInfo("page");
+	include "common/sidemenu.php";
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
